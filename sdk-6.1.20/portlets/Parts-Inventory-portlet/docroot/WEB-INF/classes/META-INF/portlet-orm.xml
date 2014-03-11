@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.ys.parts.model.impl.ManufacturerModelImpl">
+		<attributes>
+			<id name="manufId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="name" />
+			<basic name="emailAddress" />
+			<basic name="website" />
+			<basic name="phoneNumber" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ys.parts.model.impl.PartsModelImpl">
+		<attributes>
+			<id name="partId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="manufId" />
+			<basic name="name" />
+			<basic name="partNumber" />
+			<basic name="reorderDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="quantity" />
+			<transient name="modelAttributes" />
+			<transient name="nameCurrentLanguageId" />
+			<transient name="nameMap" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.ys.parts.model.impl.ManufacturerImpl" name="Manufacturer">
+		<table name="Inventory_Manufacturer" />
+		<attributes />
+	</entity>
+	<entity class="com.ys.parts.model.impl.PartsImpl" name="Parts">
+		<table name="Inventory_Parts" />
+		<attributes />
+	</entity>
+</entity-mappings>

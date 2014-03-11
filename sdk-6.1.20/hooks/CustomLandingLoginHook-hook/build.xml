@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="CustomLandingLoginHook-hook" basedir="." default="deploy">
+	<import file="/Users/shashantp/Liferay6.1GA3/sdk-6.1.20/hooks/build-common-hook.xml" />
+</project>

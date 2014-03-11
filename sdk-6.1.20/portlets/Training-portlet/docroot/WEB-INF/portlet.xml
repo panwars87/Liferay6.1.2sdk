@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd 
+	http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>sender</portlet-name>
+		<display-name>Sender YS Training</display-name>
+		<portlet-class>com.ys.IPC.portlets.SenderPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/jsp/sender/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>resource/content/Language</resource-bundle>
+		<portlet-info>
+			<title>Sender YS Training</title>
+			<short-title>Sender YS Training</short-title>
+			<keywords>Sender YS Training</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-processing-event xmlns:x="http://liferay.com/events">
+			<qname>x:password</qname>
+		</supported-processing-event>
+		<supported-publishing-event xmlns:x="http://liferay.com/events">
+			<qname>x:userName</qname>
+		</supported-publishing-event>
+		<supported-public-render-parameter>param1</supported-public-render-parameter>
+		<supported-public-render-parameter>param2</supported-public-render-parameter>
+	</portlet>
+	<portlet>
+		<portlet-name>receive</portlet-name>
+		<display-name>Receive YS Training</display-name>
+		<portlet-class>com.ys.IPC.portlets.ReceivePortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/jsp/receive/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>resource/content/Language</resource-bundle>
+		<portlet-info>
+			<title>Receive YS Training</title>
+			<short-title>Receive YS Training</short-title>
+			<keywords>Receive YS Training</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-processing-event xmlns:x="http://liferay.com/events">
+			<qname>x:userName</qname>
+		</supported-processing-event>
+		<supported-public-render-parameter>param1</supported-public-render-parameter>
+		<supported-public-render-parameter>param2</supported-public-render-parameter>
+	</portlet>
+	<portlet>
+		<portlet-name>multipleactions</portlet-name>
+		<display-name>Multiple Actions</display-name>
+		<portlet-class>
+			com.ys.training.portlets.YSMultipleActions
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/jsp/multipleactions/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>action.package.prefix</name>
+			<value>com.ys.training.Action</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Multiple Actions</title>
+			<short-title>Multiple Actions</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:userName</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:password</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<public-render-parameter>
+		<identifier>param1</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:param1</qname>
+	</public-render-parameter>
+	<public-render-parameter>
+		<identifier>param2</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:param2</qname>
+	</public-render-parameter>
+
+</portlet-app>

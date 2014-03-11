@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.ys.parts">
+	<author>shashantp</author>
+	<namespace>Inventory</namespace>
+    <entity name="Manufacturer" local-service="true" remote-service="false">
+        <column name="manufId" type="long" primary="true"></column>
+        <column name="companyId" type="long"></column>
+        <column name="groupId" type="long"></column>
+        <column name="name" type="String"></column>
+        <column name="emailAddress" type="String"></column>
+        <column name="website" type="String"></column>
+        <column name="phoneNumber" type="String"></column>
+        <order by="asc">
+            <order-column name="name" order-by="asc"></order-column>
+        </order>
+        
+        <!-- Finder Methods -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+    </entity>
+    <entity name="Parts" local-service="true" remote-service="false">
+        <column name="partId" type="long" primary="true"></column>
+        <column name="companyId" type="long"></column>
+        <column name="groupId" type="long"></column>
+        <column name="manufId" type="long"></column>
+        <column name="name" type="String" localized="true"></column>
+        <column name="partNumber" type="String"></column>
+        <column name="reorderDate" type="Date"></column>
+        <column name="quantity" type="int"></column>
+        <order by="asc">
+            <order-column name="name" order-by="asc"></order-column>
+        </order>
+        
+        <!-- Finder Methods -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="Manufacturer" return-type="Collection">
+			<finder-column name="manufId" />
+            <finder-column name="groupId" />
+		</finder>
+    </entity>
+
+</service-builder>

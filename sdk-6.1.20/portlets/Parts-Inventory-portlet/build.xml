@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="Parts-Inventory-portlet" basedir="." default="deploy">
+	<import file="/Users/shashantp/Liferay6.1GA3/sdk-6.1.20/portlets/build-common-portlet.xml" />
+</project>

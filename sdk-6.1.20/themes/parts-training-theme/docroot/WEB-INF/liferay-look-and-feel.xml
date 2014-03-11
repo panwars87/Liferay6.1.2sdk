@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.0.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_0_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.1.30+</version>
+	</compatibility>
+	<theme id="parts-training" name="Parts Training">
+		<settings>
+			<setting key="portlet-name" value="56_INSTANCE_XDRoe1a6m"></setting>
+			<setting key="layout-id" value="webContentLayout"></setting>
+		</settings>
+		<color-scheme name="blue" id="0007">
+			<css-class>blue</css-class>
+			<color-scheme-images-path>${images-path}/color_schemes/${css-class}</color-scheme-images-path>
+		</color-scheme>
+	</theme>
+</look-and-feel>

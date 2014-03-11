@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE model-hints PUBLIC "//UNKNOWN/" "unknown.dtd">
+<model-hints>
+	<model name="com.ys.parts.model.Manufacturer">
+		<field name="manufId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="name" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="website" type="String" />
+		<field name="phoneNumber" type="String" />
+	</model>
+	<model name="com.ys.parts.model.Parts">
+		<field name="partId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="manufId" type="long" />
+		<field name="name" type="String" localized="true" />
+		<field name="partNumber" type="String" />
+		<field name="reorderDate" type="Date" />
+		<field name="quantity" type="int" />
+	</model>
+</model-hints>

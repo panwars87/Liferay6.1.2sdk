@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="parts-training-theme" basedir="." default="deploy">
+	<import file="/Users/shashantp/Liferay6.1GA3/sdk-6.1.20/themes/build-common-theme.xml" />
+
+	<property name="theme.parent" value="classic" />
+</project>

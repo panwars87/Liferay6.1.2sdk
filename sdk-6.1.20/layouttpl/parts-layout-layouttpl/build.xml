@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="parts-layout-layouttpl" basedir="." default="deploy">
+	<property name="plugin.version" value="1" />
+
+	<import file="/Users/shashantp/Liferay6.1GA3/sdk-6.1.20/layouttpl/build-common-layouttpl.xml" />
+</project>
